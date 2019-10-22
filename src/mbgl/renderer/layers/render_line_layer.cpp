@@ -32,7 +32,7 @@ inline const LineLayer::Impl& impl(const Immutable<style::Layer::Impl>& impl) {
 RenderLineLayer::RenderLineLayer(Immutable<style::LineLayer::Impl> _impl)
     : RenderLayer(makeMutable<LineLayerProperties>(std::move(_impl))),
       unevaluated(impl(baseImpl).paint.untransitioned()),
-      colorRamp({256, 1}) {
+      colorRamp({10240, 1}) {
 }
 
 RenderLineLayer::~RenderLineLayer() = default;
